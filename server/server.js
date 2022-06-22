@@ -3,6 +3,7 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -11,3 +12,7 @@ app.get("/", function (req, res) {
 });
 
 const port = process.env.PORT || 4003;
+
+app.listen(port, () => {
+    console.log(`Server running on ${port}`);
+});
